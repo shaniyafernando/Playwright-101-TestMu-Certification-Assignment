@@ -1,24 +1,17 @@
 {
-  "name": "lambdatest-playwright-sample",
-  "scripts": {
-    "test": "node playwright-single.js",
-    "test-smartui": "node playwright-smartui.js",
-    "test-parallel": "node playwright-parallel.js",
-    "test-android": "node playwright-android-real-device.js",
-    "test-extension": "node playwright-extensions-test.js",
-    "test-iPhone-emulation": "node playwright-single-on-iphone.js",
-    "test-lighthouse-report": "node playwright-lighthouse-report.js"
-  },
+  "name": "playwright-test-suite",
+  "version": "1.0.0",
+  "author": "LambdaTest",
   "engines": {
-    "node": ">=12.7.0"
+    "node": ">=12.0.0"
+  },
+  "description": "Sample project to run playwright tests using playwright runner on LambdaTest platform",
+  "scripts": {
+    "test": "npx playwright test --config=./playwright.config.ts"
   },
   "devDependencies": {
-    "@cucumber/cucumber": "^12.2.0",
-    "dotenv": "^17.2.2",
-    "expect": "^30.1.2"
-  },
-  "dependencies": {
-    "@playwright/test": "^1.57.0",
-    "playwright": "^1.57.0"
+    "@playwright/test": "^1.55.1",
+    "@types/node": "^26.4.0",
+    "playwright": "^1.55.1"
   }
 }
