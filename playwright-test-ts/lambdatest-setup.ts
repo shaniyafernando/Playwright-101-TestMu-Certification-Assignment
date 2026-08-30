@@ -13,21 +13,22 @@ const capabilities = {
   browserVersion: "latest",
   "LT:Options": {
     platform: "Windows 10",
-    build: "Playwright TS Build",
-    name: "Playwright Test",
-    user: process.env.LT_USERNAME,
-    accessKey: process.env.LT_ACCESS_KEY,
+    build: "Playwright 101 Assignment Build 2",
+    name: "Playwright 101 Assignment Test 2",
+    user: "fernandoshaniya99",
+    accessKey: "oKqnmtRxmVtcAvXnI7BhV6rjf4KsUNLJcGrYmBV8gMK1r2vtng",
     network: true,
     video: true,
+    visual: true,
     console: true,
-    tunnel: false, // Add tunnel configuration if testing locally hosted webpage
-    tunnelName: "", // Optional
-    geoLocation: '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
+    tunnel:false, // Add tunnel configuration if testing locally hosted webpage
+    // tunnelName: "", // Optional
+    // geoLocation: '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
   },
 };
 
 // Patching the capabilities dynamically according to the project name.
-const modifyCapabilities = (configName, testName) => {
+const modifyCapabilities = (configName: string, testName: string) => {
   let config = configName.split("@lambdatest")[0];
   let [browserName, browserVersion, platform] = config.split(":");
   capabilities.browserName = browserName
