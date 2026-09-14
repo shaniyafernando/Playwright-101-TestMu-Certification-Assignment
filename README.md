@@ -9,3 +9,5 @@
 ## Running your tests
 - To run a single test, run 
   ```npm run test```
+
+[View assignment guidelines](./Playwright 101_Assignment Problem Scenario & Instructions.pdf)
